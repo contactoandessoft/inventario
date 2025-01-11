@@ -1,0 +1,1396 @@
+CRITICAL - 2024-12-20 04:19:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "register.php"
+[Method: GET, Route: register]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('register', [], true)
+ 3 APPPATH\Controllers\usuario.php(9): view('register')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:50:02 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('mangel1', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'mangel1', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using ****: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('mangel1', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'mangel1', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:50:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using ****: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('mangel1', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'mangel1', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:52:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('da', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'da', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using ****: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('da', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'da', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:52:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using ****: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('da', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'da', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:53:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:53:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:54:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using ****: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:54:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using ****: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:56:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using ****: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:56:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using ****: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:57:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:57:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuario`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 04:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 04:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 04:59:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 04:59:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:00:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:00:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:02:24 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using ****: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:02:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using ****: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:07:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:07:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:08:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3307, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:08:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:08:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3307, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:08:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('benjamon', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'benjamon', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:09:01 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:09:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:09:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:09:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:16:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:16:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 05:19:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa', 3306, '', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#6 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#7 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#11 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\empresa\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\empresa\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', Array, NULL, 'user')
+#5 C:\xampp\htdocs\empresa\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', Array, Array, 'user')
+#6 C:\xampp\htdocs\empresa\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 05:19:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `user` = :user:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('das', 'user', [...], null, 'user')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('user', 'user', 'das', [...], [...], 'user')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 05:46:28 --> Error: Call to undefined function set_value()
+[Method: GET, Route: register]
+in APPPATH\Views\register.php on line 14.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\usuario.php(9): view('register')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 05:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 06:37:20 --> TypeError: password_verify(): Argument #1 ($password) must be of type string, array given
+[Method: POST, Route: auth]
+in APPPATH\Models\usuarioModel.php on line 27.
+ 1 APPPATH\Models\usuarioModel.php(27): password_verify(Object(SensitiveParameterValue), '$2y$10$5l4H25/nSiNPt4zmJW.Cieauwg6.n1L3fgvw3TJQXhxLMcAx/gkNS')
+ 2 APPPATH\Controllers\Login.php(29): App\Models\usuarioModel->validateUser([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 06:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 06:39:22 --> TypeError: password_verify(): Argument #1 ($password) must be of type string, array given
+[Method: POST, Route: auth]
+in APPPATH\Models\usuarioModel.php on line 27.
+ 1 APPPATH\Models\usuarioModel.php(27): password_verify(Object(SensitiveParameterValue), '$2y$10$5l4H25/nSiNPt4zmJW.Cieauwg6.n1L3fgvw3TJQXhxLMcAx/gkNS')
+ 2 APPPATH\Controllers\Login.php(29): App\Models\usuarioModel->validateUser([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 06:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 06:51:34 --> ErrorException: Undefined array key "name"
+[Method: POST, Route: auth]
+in APPPATH\Controllers\Login.php on line 43.
+ 1 APPPATH\Controllers\Login.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\empresa\\app\\Controllers\\Login.php', 43)
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->setSession([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 06:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 06:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:07:55 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(29): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequest()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:10:07 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:11:47 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:14:51 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:15:20 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:17:38 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 07:18:05 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: password-request]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\linkrequest.php(28): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\empresa\\app\\Views\\linkrequest.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkrequest', [], true)
+ 5 APPPATH\Controllers\usuario.php(44): view('linkrequest')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario->linkrequestform()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 07:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 08:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 09:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 12:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-20 13:31:42 --> mysqli_sql_exception: Column 'nombre_responsable' cannot be null in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\empresa\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\empresa\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\empresa\app\Controllers\usuario.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(933): App\Controllers\Usuario->create()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\empresa\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\empresa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-12-20 13:31:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'nombre_responsable' cannot be null
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (:nombre_responsable:, :vigencia:, :id_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\usuario.php(72): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 13:31:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'nombre_responsable' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (NULL, 1, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (NULL, 1, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (:nombre_responsable:, :vigencia:, :id_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\usuario.php(72): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 13:31:42 --> [Caused by] mysqli_sql_exception: Column 'nombre_responsable' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (NULL, 1, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (NULL, 1, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (NULL, 1, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `responsables` (`nombre_responsable`, `vigencia`, `id_usuario`) VALUES (:nombre_responsable:, :vigencia:, :id_usuario:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\usuario.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->create()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 13:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 13:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 14:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 15:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 16:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 16:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-20 16:07:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "linkerequest.php"
+[Method: GET, Route: password-request]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('linkerequest.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('linkerequest', [], true)
+ 3 APPPATH\Controllers\usuario.php(85): view('linkerequest')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->linkrequestform()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-20 16:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 16:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-20 16:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
